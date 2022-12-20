@@ -7,13 +7,6 @@
   <version>1.0</version>
   <name>myrepo</name>
   <url>http://maven.apache.org</url>
-  <plugins>
-  <plugin>
-    <groupId>org.sonarsource.scanner.maven</groupId>
-    <artifactId>sonar-maven-plugin</artifactId>
-    <version>3.0.1</version>
-</plugin>
-    </plugins>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -22,4 +15,11 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <plugins>
+  <plugin>
+    <groupId>org.sonarsource.scanner.maven</groupId>
+    <artifactId>sonar-maven-plugin</artifactId>
+    <version>3.0.1</version>
+</plugin>
+    </plugins>
 </project>
