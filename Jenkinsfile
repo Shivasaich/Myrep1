@@ -5,8 +5,4 @@ node {
     stage('Build') { sh 'mvn clean package'
         
     }
-    stage('Results') {
-        junit '**/target/surefire-reports/TEST-*.xml'
-        archiveArtifacts 'target/*.jar'
-    }
 }
