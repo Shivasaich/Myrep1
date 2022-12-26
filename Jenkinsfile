@@ -1,6 +1,6 @@
 node {
     def mvnHome
-	environment { PATH : "/usr/local/maven/bin:$PATH"}
+	environment { PATH = "/usr/local/maven/bin:$PATH"}
     stage('Preparation') { git branch: 'newbranch', credentialsId: 'af760c75-67fc-4b21-8699-048a04bbda3f', url: 'https://github.com/Shivasaich/Myrep1.git'
     }
     stage('Build') {
