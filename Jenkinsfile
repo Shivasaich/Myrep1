@@ -5,5 +5,7 @@ node {
     stage('Build') {
        sh 'mvn clean install verify'
     }
+	stage (Email) {emailext body: 'Pipeline_job', subject: 'Build success', to: 'shivasaichinthala.0@gmail.com'
 	}
+}
 	
