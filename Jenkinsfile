@@ -12,7 +12,8 @@ node {
     }
 	stage(sonarqube) {
 	steps ( 
-	 sh 'mvn sonar:sonar'
+	 sh '''mvn sonar:sonar
+'''
 	)
 }
    
