@@ -11,9 +11,8 @@ node {
 	   
     }
 	stage(sonarqube) {
-	step (withSonarQubeEnv(credentialsId: 'b24b6246-a33a-4bc1-a923-ed2d1746bcdd')
+	step ( withSonarQubeEnv(credentialsId: 'b24b6246-a33a-4bc1-a923-ed2d1746bcdd')
     // some block
-	sh 'mvn sonar:sonar'
 	)
 }
    
