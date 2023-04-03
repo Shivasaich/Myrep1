@@ -4,8 +4,12 @@ node {
 	 git branch: 'devops', credentialsId: 'af760c75-67fc-4b21-8699-048a04bbda3f', url: 'https://github.com/Shivasaich/Myrep1.git'
     }
     stage('Build') {
+	    steps {
+		dir (devops) {
        sh 'mvn validate compile test package verify install'
     }
+	}
+	}
     stage('Email notification') {
         emailext body: 'sample_pipeline_job2', subject: 'Build has triggered', to: 'shivasaichinthala0@gmail.com'
     }
