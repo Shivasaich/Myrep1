@@ -8,7 +8,7 @@ pipeline {
 		   git branch: 'devops', credentialsId: 'af760c75-67fc-4b21-8699-048a04bbda3f', url: 'https://github.com/Shivasaich/Myrep1.git'
 		   }
 		   }
-		stage ('Build) {
+		stage ('Build') {
                    steps { dir ('devops') {
 		   sh 'clean validate test compile package verify install'
 		   }
