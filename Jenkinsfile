@@ -10,7 +10,7 @@ pipeline {
 		   }
 		stage ('Build') {
                    steps { dir ('devops') {
-		   sh 'clean validate test compile package verify install'
+		   sh 'validate test compile package verify install'
 		   }
 		   }
 		   }
