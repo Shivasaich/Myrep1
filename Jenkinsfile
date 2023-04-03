@@ -10,7 +10,8 @@ pipeline {
 		   }
 		stage ('Build') {
                    steps { dir ('devops') {
-		   sh 'validate test compile package verify install'
+		   sh 'mvn clean && mvn validate && mvn test && mvn compile && mvn package && mvn verify && mvn install'
+
 		   }
 		   }
 		   }
