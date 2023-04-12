@@ -14,8 +14,34 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+<groupId>org.sonarsource.scanner.maven</groupId>
+<artifactId>sonar-maven-plugin</artifactId>
+<version>3.2</version>
+</dependency>
   </dependencies>
   <build>
     <finalName>devops1</finalName>
   </build>
+  <distributionManagement>
+<snapshotRepository>
+<id>nexus-snapshots</id> 
+<url>http://13.40.163.134:8081/repository/maven-snapshots/</url>
+</snapshotRepository>
+<repository>
+<id>nexus-releases</id>
+<url>http://13.40.163.134:8081/repository/maven-releases/</url>
+</repository>
+</distributionManagement>
+<profiles>
+  <profile>
+    <id>sonar</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+	<properties>
+	<sonar.host.url>http://13.40.105.132:9000</sonar.host.url>
+	</properties>
+	</profile>
+	</profiles>
 </project>
